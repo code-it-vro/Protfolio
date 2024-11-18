@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border: 4px solid #fff;
+  border-radius: 20px;
+  min-height: 100px;
+  position: relative;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Custom arrows */
+::-webkit-scrollbar-button:single-button {
+  background-color: transparent;
+  display: block;
+  border-style: solid;
+  height: 16px;
+  width: 16px;
+}
+
+/* Up arrow */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #666 transparent;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent #333 transparent;
+}
+
+/* Down arrow */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 8px 8px 0 8px;
+  border-color: #666 transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  border-color: #333 transparent transparent transparent;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333 transparent;
+}
+
+/* Hide scrollbar when not hovering */
+::-webkit-scrollbar-thumb {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+
+
+
+/* Optimize performance */
+.pointer-events-none {
+  pointer-events: none;
+}
+
+/* Ensure content is above effects */
+.relative {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make background slightly off-white for better contrast */
+body {
+  background-color: #fafafa;
+}
