@@ -111,7 +111,7 @@ const First = () => {
         animate={isInView ? "visible" : "hidden"}
         variants={contentVariants}
       >
-        <h1 className="text-6xl md:text-8xl font-bold text-black mb-6 pb-8 pt-12">
+        <h1 className="text-6xl md:text-8xl font-bold text-black mb-6 pb-8 pt-12 tracking-tight">
           ASHUTOSH SHUKLA
         </h1>
         <h2 className="text-2xl md:text-4xl font-semibold text-gray-700 mb-6">

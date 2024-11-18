@@ -115,7 +115,7 @@ const Hero = () => {
           <img
             src={ashu4}
             alt="Ashutosh Shukla"
-            className="max-w-[300px] max-h-[400px] lg:max-w-[600px] lg:max-h-[600px] shadow-lg object-contain rounded-[7rem]"
+            className="max-w-[300px] max-h-[400px] lg:max-w-[700px] lg:max-h-[450px] shadow-2xl object-contain rounded-[16rem]"
           />
         </motion.div>
       </div>

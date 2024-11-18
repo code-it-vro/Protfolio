@@ -84,7 +84,7 @@ const Experience = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="md:text-right md:pr-16">
                   <h4 className="text-xl font-bold mb-2">DevOps</h4>
-                  <p className="text-gray-600 mb-4">January - May</p>
+                  <p className="text-gray-600 mb-4">January 2023 - May 2023</p>
                   <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                     <ul className="space-y-3 text-gray-700 md:text-right">
                       <li>Worked with tools like:</li>
@@ -120,7 +120,7 @@ const Experience = () => {
                 <div className="hidden md:block"></div>
                 <div className="md:pl-16">
                   <h4 className="text-xl font-bold mb-2">Backend</h4>
-                  <p className="text-gray-600 mb-4">May - July</p>
+                  <p className="text-gray-600 mb-4">May 2023  - July 2023</p>
                   <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                     <ul className="space-y-3 text-gray-700">
                       <li>Developed RESTful APIs using:</li>
@@ -151,7 +151,7 @@ const Experience = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="md:text-right md:pr-16">
                   <h4 className="text-xl font-bold mb-2">Frontend</h4>
-                  <p className="text-gray-600 mb-4">July - Present</p>
+                  <p className="text-gray-600 mb-4">July 2023- Present</p>
                   <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                     <ul className="space-y-3 text-gray-700 md:text-right">
                       <li>Focus on managing state and logic using:</li>

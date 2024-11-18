@@ -127,14 +127,15 @@ return (
                   : "md:flex-row"
               }`}
             >
+             
               {/* Project Image Container with Frame */}
-              <div className="md:w-1/2 h-[250px] md:h-auto relative">
-                <div className="absolute inset-0 m-4 bg-white"></div>
-                <div className="relative h-full m-4">
+              <div className="md:w-1/2 h-[250px] md:h-auto relative flex items-center">
+                <div className="absolute inset-0 bg-white"></div>
+                <div className="relative h-full w-full">
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="w-full h-full object-cover filter grayscale transition-transform duration-300 hover:grayscale-0"
+                    className="w-full h-full object-cover filter grayscale transition-transform duration-300 hover:grayscale-0 p-3 rounded-xl"
                   />
                 </div>
               </div>

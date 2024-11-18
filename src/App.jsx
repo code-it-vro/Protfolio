@@ -72,7 +72,7 @@ export default function App() {
     <>
       {/* Custom Cursor */}
       <motion.div
-        className="fixed w-4 h-4 rounded-full bg-black/20 pointer-events-none z-50 mix-blend-difference"
+        className="fixed w-2 h-2 rounded-full bg-gray-400 pointer-events-none z-50"
         animate={{
           x: cursorPosition.x - 8,
           y: cursorPosition.y - 8,
@@ -81,7 +81,7 @@ export default function App() {
         transition={{ type: "spring", stiffness: 500, damping: 28 }}
       />
       <motion.div
-        className="fixed w-8 h-8 rounded-full border border-black/20 pointer-events-none z-50 mix-blend-difference"
+        className="fixed w-4 h-4 rounded-full border border-black pointer-events-none z-50"
         animate={{
           x: cursorPosition.x - 16,
           y: cursorPosition.y - 16,
