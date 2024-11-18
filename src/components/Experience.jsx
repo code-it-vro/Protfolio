@@ -14,16 +14,23 @@ import { SiTcs } from "react-icons/si";
 const Experience = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
     transition: { duration: 0.6 },
   };
 
-  const staggerChildren = {
-    animate: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
+  const slideInLeft = {
+    initial: { opacity: 0, x: -100 },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.8, type: "spring", bounce: 0.4 },
+  };
+
+  const slideInRight = {
+    initial: { opacity: 0, x: 100 },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.8, type: "spring", bounce: 0.4 },
   };
 
   const technologies = {
@@ -47,30 +54,23 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 bg-white">
       <div className="max-w-5xl mx-auto px-4">
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          variants={staggerChildren}
-          className="space-y-12"
-        >
+        <div className="space-y-12">
           {/* Title */}
           <motion.h2
-            variants={fadeInUp}
+            {...fadeInUp}
             className="text-4xl md:text-5xl font-bold text-center mb-16"
           >
             Experience & Education
           </motion.h2>
 
           {/* Company Header */}
-          <motion.div variants={fadeInUp} className="text-center mb-16">
+          <motion.div {...fadeInUp} className="text-center mb-16">
             <div className="flex flex-col items-center gap-4">
               <h3 className="text-2xl md:text-3xl font-bold">
                 Tata Consultancy Services
               </h3>
               <SiTcs className="text-6xl text-gray-800" />
             </div>
-
             <p className="text-gray-600 mt-2">December 2023 – Present</p>
           </motion.div>
 
@@ -80,7 +80,7 @@ const Experience = () => {
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-black"></div>
 
             {/* DevOps Role - Left */}
-            <motion.div variants={fadeInUp} className="relative mb-16 md:mb-24">
+            <motion.div {...slideInLeft} className="relative mb-16 md:mb-24">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="md:text-right md:pr-16">
                   <h4 className="text-xl font-bold mb-2">DevOps</h4>
@@ -115,7 +115,7 @@ const Experience = () => {
             </motion.div>
 
             {/* Backend Role - Right */}
-            <motion.div variants={fadeInUp} className="relative mb-16 md:mb-24">
+            <motion.div {...slideInRight} className="relative mb-16 md:mb-24">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="hidden md:block"></div>
                 <div className="md:pl-16">
@@ -147,7 +147,7 @@ const Experience = () => {
             </motion.div>
 
             {/* Frontend Role - Left */}
-            <motion.div variants={fadeInUp} className="relative">
+            <motion.div {...slideInLeft} className="relative">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="md:text-right md:pr-16">
                   <h4 className="text-xl font-bold mb-2">Frontend</h4>
@@ -179,7 +179,10 @@ const Experience = () => {
             </motion.div>
 
             {/* Education Section - Right */}
-            <motion.div variants={fadeInUp} className="relative mb-16 md:mb-24 mt-16">
+            <motion.div
+              {...slideInRight}
+              className="relative mb-16 md:mb-24 mt-16"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="hidden md:block"></div>
                 <div className="md:pl-16">
@@ -208,7 +211,7 @@ const Experience = () => {
               </div>
             </motion.div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
