@@ -58,7 +58,7 @@ const First = () => {
     >
       {/* Social Media Icons - Vertical */}
       <motion.div
-        className="hidden md:flex flex-col fixed right-8 top-1/2 -translate-y-1/2 space-y-6 z-10"
+        className="hidden md:flex flex-col fixed right-8 top-1/3 -translate-y-1/2 space-y-6 z-10"
         variants={socialVariants}
         initial="hidden"
         animate="visible"
@@ -102,7 +102,7 @@ const First = () => {
       </motion.div>
 
       {/* Vertical Line */}
-      <div className="hidden md:block absolute h-2/3 w-1 bg-gray-400 left-16 top-1/2 -translate-y-1/2"></div>
+      <div className="hidden lg:block absolute h-2/3 w-1 bg-gray-400 left-16 top-1/2 -translate-y-1/2"></div>
 
       {/* Main Content */}
       <motion.div
@@ -133,7 +133,7 @@ const First = () => {
 
         {/* Scroll Prompt */}
         <motion.div
-          className="hidden md:block absolute bottom-12 right-12"
+          className=" md:block absolute bottom-8 right-20"
           variants={scrollPromptVariants}
           initial="initial"
           animate="animate"

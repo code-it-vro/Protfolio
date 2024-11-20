@@ -47,7 +47,10 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <div className="hidden lg:flex items-center justify-between px-8 py-4 bg-slate-950 rounded-full shadow-md max-w-5xl mx-auto text-white">
         <div className="font-bold text-2xl">
-          <span className="font-mono cursor-pointer">ASHU</span>
+          <span className="relative font-sans">
+            A <span className="text-blue-300">S</span>
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></span>
+          </span>
         </div>
         <ul className="flex space-x-6 text-lg font-medium">
           <li>
@@ -101,7 +104,10 @@ const Navbar = () => {
       {/* Mobile Navbar */}
       <div className="flex items-center justify-between px-6 py-3 bg-slate-950 rounded-full shadow-md lg:hidden text-white mx-4">
         <div className="font-bold text-2xl">
-          <span className="font-mono cursor-pointer">ASHU</span>
+          <span className="relative font-sans" >
+            A <span className="text-blue-300">S</span>
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></span>
+          </span>
         </div>
         <button
           onClick={toggleMobileMenu}
